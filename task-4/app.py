@@ -1,8 +1,8 @@
 import streamlit as st
 import google.generativeai as ai
 
-with open(r"C:\Users\prane\OneDrive\Desktop\api key.txt", "r") as file:
-    api_key = file.read().strip()  
+api_key = st.secrets["API_KEY"]
+
 
 ai.configure(api_key= api_key)
 
